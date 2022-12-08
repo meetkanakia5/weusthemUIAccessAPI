@@ -71,7 +71,11 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td style="width: 10%;">
+                                @if($contact->image != "")
                                     <img src="http://localhost:8000/{{ ($contact->image) }}" style="max-width: 100%; height: auto;">
+                                @else
+                                    No Image 
+                                @endif
                                 </td>
                                 <td>{{ $contact->fname }}</td>
                                 <td>{{ $contact->lname }}</td>
